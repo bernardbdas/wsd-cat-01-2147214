@@ -4,7 +4,7 @@
         <html>
             <head></head>
             <body style="text-align:center">
-                <h1 >employee Management System</h1>
+                <h1 >Employee Management System</h1>
                 <table border="2" align="center">
                     <tr>
                         <th>ID</th>
