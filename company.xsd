@@ -6,7 +6,7 @@
                 <xs:element name="employee" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="emp-id"></xs:element>
+                            <xs:element name="emp-id" type="xs:integer"/>
                             <xs:element name="emp-name" type="xs:string" />
                             <xs:element name="emp-age" type="xs:integer" />
                             <xs:element name="emp-salary" type="xs:decimal" />
@@ -16,8 +16,8 @@
                         </xs:sequence>
                     </xs:complexType>
                     <xs:unique name="unique">
-                        <xs:selector xpath="Employee" />
-                        <xs:field xpath="Emp-ID" />
+                        <xs:selector xpath="employee" />
+                        <xs:field xpath="emp-ID" />
                     </xs:unique>
                 </xs:element>
             </xs:sequence>
@@ -46,7 +46,7 @@
 
     <xs:simpleType name="emp-phone">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+            <xs:pattern value="[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
         </xs:restriction>
     </xs:simpleType>
 
