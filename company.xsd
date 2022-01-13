@@ -6,15 +6,19 @@
                 <xs:element name="employee" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="emp-name" type="xs:string"/>
-                            <xs:element name="emp-age" type="xs:integer"/>
-                            <xs:element name="emp-salary" type="xs:decimal"/>
-                            <xs:element name="emp-email" type="xs:string"/>
-                            <xs:element name="emp-phone" type="xs:string"/>
-                            <xs:element name="emp-designation" type="xs:string"/>
+                            <xs:element name="emp-id"></xs:element>
+                            <xs:element name="emp-name" type="xs:string" />
+                            <xs:element name="emp-age" type="xs:integer" />
+                            <xs:element name="emp-salary" type="xs:decimal" />
+                            <xs:element name="emp-email" type="xs:string" />
+                            <xs:element name="emp-phone" type="xs:string" />
+                            <xs:element name="emp-designation" type="xs:string" />
                         </xs:sequence>
-                        <xs:attribute name="emp-id" type="xs:string" use="required" />
                     </xs:complexType>
+                    <xs:unique name="unique">
+                        <xs:selector xpath="Employee" />
+                        <xs:field xpath="Emp-ID" />
+                    </xs:unique>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
