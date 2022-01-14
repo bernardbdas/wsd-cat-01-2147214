@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
         <html>
             <head></head>
@@ -17,7 +18,7 @@
                         <th>Promotion</th>
                     </tr>
                     <xsl:for-each select="company/employee">
-                        <xsl:sort select="emp-ID"></xsl:sort>
+                        <xsl:sort select="emp-id"></xsl:sort>
                         <xsl:if test="emp-age &gt; 50">
                             <tr>
                                 <td>
@@ -33,10 +34,10 @@
                                     <xsl:value-of select="emp-salary"></xsl:value-of>
                                 </td>
                                 <td>
-                                    <xsl:value-of select="emp-emailid"></xsl:value-of>
+                                    <xsl:value-of select="emp-email"></xsl:value-of>
                                 </td>
                                 <td>
-                                    <xsl:value-of select="emp-PhoneNum"></xsl:value-of>
+                                    <xsl:value-of select="emp-phone"></xsl:value-of>
                                 </td>
                                 <td>
                                     <xsl:value-of select="emp-designation"></xsl:value-of>
@@ -47,7 +48,7 @@
                         <xsl:if test="emp-age &lt; 50 and emp-age &gt; 40">
                             <tr>
                                 <td>
-                                    <xsl:value-of select = "emp-ID"></xsl:value-of>
+                                    <xsl:value-of select = "emp-id"></xsl:value-of>
                                 </td>
                                 <td>
                                     <xsl:value-of select="emp-name"></xsl:value-of>
@@ -59,10 +60,10 @@
                                     <xsl:value-of select="emp-salary"></xsl:value-of>
                                 </td>
                                 <td>
-                                    <xsl:value-of select="emp-emailid"></xsl:value-of>
+                                    <xsl:value-of select="emp-email"></xsl:value-of>
                                 </td>
                                 <td>
-                                    <xsl:value-of select="emp-PhoneNum"></xsl:value-of>
+                                    <xsl:value-of select="emp-phone"></xsl:value-of>
                                 </td>
                                 <td>
                                     <xsl:value-of select="emp-designation"></xsl:value-of>
@@ -73,7 +74,7 @@
                         <xsl:if test="emp-age &lt; 40">
                             <tr>
                                 <td>
-                                    <xsl:value-of select = "emp-ID"></xsl:value-of>
+                                    <xsl:value-of select = "emp-id"></xsl:value-of>
                                 </td>
                                 <td>
                                     <xsl:value-of select="emp-name"></xsl:value-of>
@@ -85,10 +86,10 @@
                                     <xsl:value-of select="emp-salary"></xsl:value-of>
                                 </td>
                                 <td>
-                                    <xsl:value-of select="emp-emailid"></xsl:value-of>
+                                    <xsl:value-of select="emp-email"></xsl:value-of>
                                 </td>
                                 <td>
-                                    <xsl:value-of select="emp-PhoneNum"></xsl:value-of>
+                                    <xsl:value-of select="emp-phone"></xsl:value-of>
                                 </td>
                                 <td>
                                     <xsl:value-of select="emp-designation"></xsl:value-of>
@@ -96,7 +97,7 @@
                                 <td>Developer</td>
                             </tr>
                         </xsl:if>
-                       
+
                     </xsl:for-each>
                 </table>
             </body>
