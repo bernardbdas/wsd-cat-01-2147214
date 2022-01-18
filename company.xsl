@@ -22,7 +22,7 @@
                         <xsl:if test="emp-age &gt; 50">
                             <tr>
                                 <td>
-                                    <xsl:value-of select = "emp-ID"></xsl:value-of>
+                                    <xsl:value-of select = "emp-id"></xsl:value-of>
                                 </td>
                                 <td>
                                     <xsl:value-of select="emp-name"></xsl:value-of>
